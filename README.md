@@ -5,6 +5,7 @@ See the website in action [here:](http://knacsteem.org)
   
 ## Contributing to this Project
 Get in touch on Discord: https://discord.gg/XSqTRgz
+For PRs and feature request, please fork https://github.com/knacksteem/knacksteem.org
 
 ## Roadmap
 1. clean the code
