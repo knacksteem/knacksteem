@@ -165,7 +165,7 @@ class SubFeed extends React.Component {
 
   renderContributions() {
     const { contributions, match, user } = this.props;
-	
+
 	if(!this.state.skip)
 	{
 		return [];
@@ -270,7 +270,7 @@ class SubFeed extends React.Component {
     const contributions = this.renderContributions();
     const isFetching = loading === Actions.GET_CONTRIBUTIONS_REQUEST;
     const hasMore = this.total > contributions.length;
-	
+
     const goTo = (type) => {
       const { history, location, match } = this.props;
 
@@ -319,18 +319,18 @@ class SubFeed extends React.Component {
               <TabPane tab={<span><Icon type="appstore-o" />All</span>} key="all" />
               {this.isModerator() && match.params.filterBy === 'review' ? <TabPane tab={<span><Icon type="paper-clip" />Blog Posts</span>} key="blog" /> : null}
               {match.params.repoId && <TabPane tab={<span><Icon type="notification" />Tasks Requests</span>} key="tasks" />}
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="ideas" />Suggestions</span>} key="ideas" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="sub-projects" />Sub-Projects</span>} key="sub-projects" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="development" />Development</span>} key="development" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="bug-hunting" />Bug Hunting</span>} key="bug-hunting" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="translations" />Translations</span>} key="translations" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="graphics" />Graphics</span>} key="graphics" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="analysis" />Analysis</span>} key="analysis" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="social" />Visibility</span>} key="social" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="documentation" />Documentation</span>} key="documentation" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="ideas" />Vlog</span>} key="ideas" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="sub-projects" />Graphics</span>} key="sub-projects" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="development" />Art</span>} key="development" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="bug-hunting" />Knack</span>} key="bug-hunting" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="translations" />One Altruism</span>} key="translations" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="graphics" />Music</span>} key="graphics" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="analysis" />Joke/Humor</span>} key="analysis" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="social" />Inspiring</span>} key="social" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="documentation" />Visibility/Marketing</span>} key="documentation" />
               <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="tutorials" />Tutorials</span>} key="tutorials" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="video-tutorials" />Video Tutorials</span>} key="video-tutorials" />
-              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="copywriting" />Copywriting</span>} key="copywriting" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="video-tutorials" />News</span>} key="video-tutorials" />
+              <TabPane tab={<span className="md-subfeed-icons"><CategoryIcon from="from-subfeed" type="copywriting" />Quotes</span>} key="copywriting" />
             </Tabs> : null}
 
         {(match.path === '/tasks' || (this.isTask() && match.params.filterBy !== 'review')) ?
